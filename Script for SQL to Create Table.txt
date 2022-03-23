@@ -1,0 +1,35 @@
+use [master];
+GO
+if db_id('Buying_cookies') is not null
+begin
+	drop database Buying_cookies;
+end
+GO
+create database [Buying_cookies];
+GO
+use [Buying_cookies];
+GO
+
+
+ CREATE TABLE [About_Duty] (
+[Id] INT IDENTITY (1,1) NOT NULL  PRIMARY KEY,
+[FirstNameUser] NVARCHAR(50),	--Пользователь  Имя
+[LastNameUser] NVARCHAR(50),	--Пользователь Фамилия
+[Duty] FLOAT  --Долг
+ );
+
+ GO
+ USE [About_Duty]
+GO
+INSERT INTO [dbo].[About_Duty]([FirstNameUser], [LastNameUser], [Duty])
+VALUES (N'Владимир', N'Пономарёв', 0)
+
+INSERT INTO [dbo].[About_Duty]([FirstNameUser], [LastNameUser], [Duty])
+VALUES (N'Ольга', N'Волкова', 0)
+
+INSERT INTO [dbo].[About_Duty]([FirstNameUser], [LastNameUser], [Duty])
+VALUES (N'Мария', N'Вострова', 0)
+
+INSERT INTO [dbo].[About_Duty]([FirstNameUser], [LastNameUser], [Duty])
+VALUES (N'Виктор', N'Анисимов', 0)
+
